@@ -35,6 +35,12 @@ const cart = [
 
 //CODE HERE
 
+var sumCartInitial = 0;
+var sumCart2 = cart.reduce((a, c) => a + c.price, sumCartInitial);
+
+console.log(sumCart2)
+
+
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
 
@@ -55,6 +61,15 @@ const cart = [
 
 //CODE HERE
 
+let calcFinalPrice = (cartTotal, couponValue, tax) => {
+    var taxedSum = cartTotal * tax
+    let SumAfterTaxAndCoupon = (taxedSum + sumCart2) - couponValue
+
+    console.log(SumAfterTaxAndCoupon)
+
+}
+
+calcFinalPrice(26.97, 2.00, 0.08)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -78,7 +93,15 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    The customer object would need the name of the customer, their phone number, the 
+    items they ordered, the total price, and whether its for pick up or delivery.
+    I chose these properties because they are what is usually required when executing a
+    food order. 
+    customer - string because its a name
+    phone number - integer because its a number
+    items ordered - array because there are multiple items from a food category
+    total price - integer because its a number
+    pick up or delivery - string because its just a word 
 
 */
 
@@ -88,3 +111,14 @@ const cart = [
 */
 
 //CODE HERE
+
+const customer = {
+    customerName: "Nami",
+    phoneNumber: 1234567891,
+    itemsOrdered: ['shaggy dog roll', 'margherita pizza', 'salmon and rice'],
+    totalPrice: 20,
+    pickUporDeliv: "pick up"
+
+}
+
+
