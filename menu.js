@@ -169,17 +169,10 @@ foodArr = [
 //CODE HERE
 
 const checkTag = (tag) => {
-    const approvedTags = foodArr.includes(tag) 
-    if (approvedTags) {
-        return "You're in our delivery zone!"
-    } else {
-        return "Sorry, we can't deliver to that address."
-    }
-    }
-    
-    console.log(checkTag("category"))
+    foodArr.includes(tag)
+}
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+ const filteredFood = foodArr.filter(checkTag("spinach"))
 
 
 
